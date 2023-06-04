@@ -1,0 +1,25 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "A small project that I have done myselft to practice working with express and mongoDB / mongoose.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ntrie1/Task-Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ntrie1/Task-Manager/issues"
+  },
+  "homepage": "https://github.com/Ntrie1/Task-Manager#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.2",
+    "nodemon": "^2.0.22"
+  }
+}
