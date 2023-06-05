@@ -16,15 +16,10 @@
     <title>Task Manager</title>
   </head>
   <body>
-    <form class="task-form">
+    <form class="task-form" action="/submit" method="POST" >
       <h4>Task manager</h4>
       <div class="form-control">
-        <input
-          type="text"
-          name="name"
-          class="task-input"
-          placeholder="Insert your task here..."
-        />
+        <input type="text" name="name" class="task-input" placeholder="Insert your task here..."/>
         <button type="submit" class="btn submit-btn">submit</button>
       </div>
       <div class="form-alert"></div>
@@ -33,7 +28,7 @@
       <p class="loading-text">Loading...</p>
       <div class="tasks"></div>
     </section>
-    <!-- axios -->
+ 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
       integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
