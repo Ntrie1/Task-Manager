@@ -1,21 +1,21 @@
-
 const express = require('express');
 const app = express();
-const path = require('path');
 
 
 
-app.use(express.json())
 
 const expressConfig = require('./config/expressConfig');
 const dbConnect = require('./config/dbConfig');
-const routes = require('./routes/tasks')
+const routes = require('./routes/tasks');
+const pugConfiguration = require('./config/pugConfig');
 
 const PORT = 3000;
 
+pugConfiguration(app);
 expressConfig(app);
 
 
+// app.use(express.json());
 app.use(routes);
 
 // app.post('/submit', (req, res) => {
@@ -31,7 +31,6 @@ app.use(routes);
 dbConnect()
     .then(() => console.log('DB connected successfully'))
     .catch(err => console.log('DB error: ', err))
-
 
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}...`));
