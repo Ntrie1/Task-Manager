@@ -1,15 +1,12 @@
 const router = require('express').Router();
 
 const taskController = require('../controllers/taskController')
+const homeController = require('../controllers/homeController')
 
 
 
 //router.use(homeController);
-router.get('/', function (req, res) {
-    res.sendFile(path.resolve('src/public/index.html'));
-
-    console.log(req.body)
-})
+router.use(homeController);
 router.use('/submit', taskController);
 router.get('*', (req, res) =>{
     res.redirect('/404')

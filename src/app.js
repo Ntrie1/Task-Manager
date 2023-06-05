@@ -17,12 +17,19 @@ expressConfig(app);
 
 // app.use(express.json());
 app.use(routes);
+app.get('/edit', (req, res) => {
+    // Perform any necessary logic or processing here
+  
+    // Redirect to the desired page
+    res.redirect('/edit-page');
+  });
 
 // app.post('/submit', (req, res) => {
 //     const inputData = req.body.name;
 //     // Process the data as needed
 //     // Example: console.log(inputData);
 //     console.log(inputData)
+
 //   });
 
 
