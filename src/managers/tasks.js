@@ -11,5 +11,9 @@ exports.create = (taskName) => {
     return task.save();
 }
 
+exports.updateTask = (taskId, data) => {
+    return Task.findByIdAndUpdate(taskId, { data });
+}
+
 
 

@@ -19,8 +19,8 @@ section.tasks-container
 ul
   each allTask  in allTasks
     li.allTasks= allTask.name
-
-    button.btn-details(href="/details") Details
+    a.button.btn-details(href=`/details/${allTask._id}`) Details
+    
 
 
            
